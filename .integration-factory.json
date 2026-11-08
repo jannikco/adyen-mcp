@@ -1,41 +1,62 @@
 {
   "schemaVersion": 1,
-  "status": "ready",
-  "verification": "mock-only",
-  "releaseEligible": true,
-  "maintainer": "jannikco",
-  "license": "MIT",
-  "sourceRevision": "36e3d4fe7559c5632e043d068235e595fd1bac2f31ada1a08e69d8b05372857a",
-  "evidence": [
-    "Source-backed provider setup metadata",
-    "Offline configuration and MCP protocol tests"
-  ],
-  "provenance": [
-    "https://raw.githubusercontent.com/Adyen/adyen-openapi/main/json/CheckoutService-v72.json"
-  ],
   "id": "adyen-mcp",
   "kind": "mcp-setup",
   "product": "pipmcp",
   "title": "Adyen MCP setup and connection checker",
-  "description": "Generate Adyen MCP client configuration, inspect available tools and validate hosted endpoint access through PipMCP.",
+  "description": "Prepare Adyen for AI workflows with a PipMCP setup doctor, authenticated discovery and coding-agent instructions.",
+  "status": "ready",
+  "verification": "mock-only",
+  "releaseEligible": false,
   "operationIds": [],
+  "maintainer": "jannikco",
+  "license": "MIT",
+  "attributionSlug": "github-adyen-mcp",
+  "sourceRevision": "a4717120d31628b8786777624059ff04f8e118f1092803b931855314371143e9",
+  "qualityVersion": 2,
+  "artifactType": "setup",
+  "evidence": [
+    "Gateway HTTP transport fixtures",
+    "Generated stdio wrapper discovery/call fixtures"
+  ],
+  "provenance": [
+    "https://raw.githubusercontent.com/Adyen/adyen-openapi/main/json/CheckoutService-v72.json"
+  ],
+  "utility": {
+    "problem": "Prepare Adyen and inspect your hosted setup",
+    "output": "Offline setup plan and authenticated discovery diagnostics"
+  },
   "appSlug": "adyen",
   "appName": "Adyen",
-  "providerDocs": "https://raw.githubusercontent.com/Adyen/adyen-openapi/main/json/CheckoutService-v72.json",
-  "providerWebsite": "https://www.adyen.com/",
-  "authentication": {
-    "type": "api_key_header",
-    "requiredCredentialFields": [
-      "api_key"
-    ],
-    "requiredHeaderNames": [],
-    "helpUrl": "https://docs.adyen.com/development-resources/api-credentials/",
-    "tenantRequired": true,
-    "accountParameterNames": [
-      "merchant_account"
-    ]
+  "maintenanceOnly": true,
+  "executionAuthority": "pipmcp-gateway",
+  "version": "1.0.0",
+  "agentReady": true,
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "gateway_transport",
+          "level": "Tested",
+          "method": "contract-fixture",
+          "evidenceRefs": [
+            "Generated gateway/stdio fixtures"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "Generated gateway/stdio fixtures"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
   },
-  "attributionSlug": "github-adyen-mcp",
   "factory": "leadadapter-pipmcp",
-  "generatorVersion": 1
+  "generatorVersion": 3
 }

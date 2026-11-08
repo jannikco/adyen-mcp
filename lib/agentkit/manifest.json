@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "product": "pipmcp",
+  "credential": "PIPMCP_API_KEY",
+  "skills": [
+    {
+      "name": "pipmcp-adyen",
+      "description": "Connect AI agents to Adyen using one PipMCP API key and actual hosted tool discovery."
+    }
+  ],
+  "files": {
+    "skills/pipmcp-adyen/SKILL.md": "e195fca2ec6da00516c3661a5f9995fb6e091acbe12f9670123ced199a32c2c7"
+  }
+}
